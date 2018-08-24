@@ -5,7 +5,6 @@ class Pokemon extends Component {
 
   static propTypes = {
     pokemon: PropTypes.object.isRequired,
-    onEdit: PropTypes.func.isRequired,
     onDelete: PropTypes.func.isRequired
   };
 
@@ -14,11 +13,11 @@ class Pokemon extends Component {
 
     return (
       <p className="note-display">
-        {note.title}: {note.content} 
+        {pokemon.title}: {pokemon.content} 
         <button name="Delete" onClick={onDelete}>🗑</button>
       </p>
     );
   }
 }
 
-export default Note;
+export default Pokemon;
