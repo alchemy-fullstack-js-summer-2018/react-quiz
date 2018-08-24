@@ -9,6 +9,10 @@ class App extends Component {
     favorite: null
   };
 
+  handleSelect = favorite => {
+    this.setState({ favorite });
+  };
+
   render() {
     const { pokedex, favorite } = this.state;
 
@@ -21,7 +25,10 @@ class App extends Component {
           </Fragment>
           : <h2>Select your favorite pokemon.</h2>
         }
-        <Pokedex pokedex={pokedex}/>
+        <Pokedex 
+          pokedex={pokedex}
+          onSelect={this.handleSelect}
+        />
       </div>
     );
   }
