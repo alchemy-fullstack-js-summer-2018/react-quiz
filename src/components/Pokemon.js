@@ -5,7 +5,7 @@ import styles from './Pokemon.css';
 class Pokemon extends Component {
   static propTypes = {
     pokemon: PropTypes.object.isRequired,
-    onSelect: PropTypes.func.isRequired
+    onSelect: PropTypes.func
   };
 
   onSelect() {
