@@ -14,6 +14,7 @@ class Pokedex extends Component {
   };
 
   render() {
+    
 
     return (
       <p>
