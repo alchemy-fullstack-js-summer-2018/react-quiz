@@ -17,13 +17,17 @@ class Pokedex extends Component {
   }
 
   render() {
-    const { pokedex, onSelect } = this.props;
+    const { pokemon, onSelect } = this.props;
 
     return (
-      <div>
-        <h1>Pokedex</h1>
-        <Pokemon onSelect={add}/>
-      </div>
+      <ul>
+        {Pokemon.map(pokemon => (
+          <Pokemon
+            name={pokemon.name}
+            image={pokemon.url_image}
+          />
+        ))}
+      </ul>
       
     );
   }
