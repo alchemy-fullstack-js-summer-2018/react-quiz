@@ -16,6 +16,8 @@ class Pokedex extends Component {
     this.setState(pokedex);
   }
 
+  // onSelect
+
   render() {
     const { pokemon, onSelect } = this.props;
 

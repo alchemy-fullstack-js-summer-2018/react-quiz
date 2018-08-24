@@ -17,6 +17,8 @@ class Pokemon extends Component {
     this.setState(pokemon);
   }
 
+  //onSelect
+
   handleFavorite() {
     this.setState({
       name: '',
