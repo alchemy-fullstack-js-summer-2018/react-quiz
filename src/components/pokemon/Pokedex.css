@@ -1,0 +1,9 @@
+:local(.pokedex) {
+
+  display: flex;
+  flex-wrap: wrap;
+  img {
+    width: 200px;
+  }
+}
+
