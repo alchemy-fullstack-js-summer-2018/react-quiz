@@ -14,8 +14,8 @@ class Pokemon extends Component {
     return (
       <li>
         <h3>Pokemon Component</h3>
-        {/* <img src={pokemon.url_image}></img> */}
-        <p>{pokemon.name}</p>
+        
+        <p>{pokemon.pokemon}</p>
         <p>{pokemon.type_1}</p>
         <p>{pokemon.type_2}</p>
         <p>{pokemon.attack}</p>
