@@ -6,15 +6,16 @@ import styles from './Pokedex.css';
 class Pokedex extends Component {
 
   static Proptypes = { 
-    pokedex: PropTypes.array.isRequired
+    pokedex: PropTypes.array.isRequired,
+    onSelect: PropTypes.func.isRequired
    }
 
   render() { 
-    const { pokedex } = this.props;
+    const { pokedex, onSelect } = this.props;
     return ( 
       <ul className={styles.pokedex}>
         {pokedex.map((pokemon, i) => (
-          <Pokemon key={i} pokemon={pokemon}/>
+          <Pokemon key={i} pokemon={pokemon} onSelect={onSelect}/>
         ))}
       </ul>
      );

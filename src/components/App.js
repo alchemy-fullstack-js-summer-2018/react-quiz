@@ -9,13 +9,25 @@ class App extends Component {
     favorite: null
   };
 
+  handleFavorite = (favorite) => {
+    // const { favorite } = this.state;
+    this.setState({ favorite });
+  };
+
   render() {
-    const { pokedex } = this.state;
+    const { pokedex, favorite } = this.state;
     return (
       
       <div>
-        <h1>Pokedex!</h1>
-        <Pokedex pokedex={pokedex}/>
+        <section>
+          {favorite 
+            ? <p>Your favorite pokemon is: {favorite.pokemon} </p>
+            : <p>Please select a favorite pokemon!</p>}
+        </section>
+        <section>
+          <h1>Pokedex!</h1>
+          <Pokedex pokedex={pokedex} onSelect={this.handleFavorite}/>
+        </section>
       </div>
     );
   }
