@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import pokedex from '../pokedex';
 import Pokedex from './Pokedex';
 
@@ -19,7 +19,7 @@ class App extends Component {
 
     return (
       <div>
-        Hello React Quiz! {this.state.pokedex.length}
+        Hello React Quiz! {pokedex.length}
 
         <section className="favorite">
           {pokedex
@@ -29,7 +29,11 @@ class App extends Component {
         </section>
 
         <section>
-          <Pokedex onSelect={this.handleSelect}/>
+          {pokedex &&
+            <Fragment>
+              <Pokedex onSelect={this.handleSelect} pokemon={pokedex}/>
+            </Fragment>
+          }
         </section>  
       </div>
     );
