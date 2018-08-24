@@ -14,6 +14,7 @@ export default class Pokedex extends Component {
 
     return (
       <ul>
+        
         {pokedex.map((pokedex, i) => (
           <Pokedex key={i} pokedex={pokedex}/>
         ))}
