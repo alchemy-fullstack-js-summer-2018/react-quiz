@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import pokedex from '../pokedex';
+import Pokedex from './Pokedex';
 
 class App extends Component {
 
@@ -8,10 +9,21 @@ class App extends Component {
     favorite: null
   };
 
+  handleSelect = () => {
+
+  }
+
   render() {
+    console.log(pokedex);
 
     return (
-      <div>Hello React Quiz! {this.state.pokedex.length}</div>
+      <div>
+        <div>Hello React Quiz! {this.state.pokedex.length}</div>
+        <Pokedex
+          pokedex={this.state.pokedex}
+          onSelect={this.handleSelect}
+        />
+      </div>
     );
   }
 }
