@@ -4,11 +4,12 @@ import PropTypes from 'prop-types';
 class Pokemon extends Component {
 
   static propTypes = {
-    pokemon: PropTypes.object
+    pokemon: PropTypes.object,
+    onSelect: PropTypes.func
   };
 
   render() {
-    const { pokemon } = this.props;
+    const { pokemon, onSelect } = this.props;
 
     return (
       <li>

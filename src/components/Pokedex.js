@@ -5,16 +5,18 @@ import Pokemon from './Pokemon';
 class Pokedex extends Component {
 
   static propTypes = {
-    pokedex: PropTypes.array
+    pokedex: PropTypes.array,
+    onSelect: PropTypes.func
   };
   render() {
-    const { pokedex } = this.props;
+    const { pokedex, onSelect } = this.props;
     return (
       <ul>
         {pokedex.map(pokemon => (
           <Pokemon
             key={pokemon.id}
             pokemon={pokemon}
+            onSelect={onSelect}
           />
         ))}
       </ul>
