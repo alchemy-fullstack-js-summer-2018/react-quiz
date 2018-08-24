@@ -24,7 +24,6 @@ class App extends Component {
             <h1>Your Favorite Pokemon!</h1>
             <p>{favorite.pokemon}</p>
             <img src={favorite.url_image}/>
-            <h2>favorite.name</h2>
             <hr/>
           </Fragment>
           : <h2>Select your favorite pokemon.</h2>
