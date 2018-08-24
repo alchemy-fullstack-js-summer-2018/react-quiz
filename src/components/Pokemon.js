@@ -19,11 +19,11 @@ export default class Pokemon extends Component {
 
     return (
       <li className={styles.pokemon}>
-        <p>Pokemon: {pokemon.pokemon}</p>
-        <p>Type 1: {pokemon.type1}</p>
-        <p>Type 2: {pokemon.type2}</p>
-        <p>Attack: {pokemon.attack}</p>
-        <p>Defense: {pokemon.defense}</p>
+        <h3 style={{ color: `${pokemon.color_1}` }}>Pokemon: {pokemon.pokemon}</h3>
+        <p style={{ color: `${pokemon.color_2}` }}>Type 1: {pokemon.type1}</p>
+        <p style={{ color: `${pokemon.color_2}` }}>Type 2: {pokemon.type2}</p>
+        <p style={{ color: `${pokemon.color_2}` }}>Attack: {pokemon.attack}</p>
+        <p style={{ color: `${pokemon.color_2}` }}>Defense: {pokemon.defense}</p>
         <img src={pokemon.url_image}/>
         <button onClick={onSelect}>{favorite ? 'Remove from' : 'Add to'} favorites</button>
       </li>
