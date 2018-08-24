@@ -22,8 +22,8 @@ class App extends Component {
       <div>
         <section>
           {favorite 
-            ? <p>Your favorite pokemon is: {favorite.pokemon} </p>
-            : <p>Please select a favorite pokemon!</p>}
+            ? <h2>Your favorite pokemon is: {favorite.pokemon} </h2>
+            : <h2>Click a pokemon to choose them as your favorite!</h2>}
         </section>
         <section>
           <h1>Pokedex!</h1>
