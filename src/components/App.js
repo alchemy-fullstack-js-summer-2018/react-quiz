@@ -12,7 +12,7 @@ class App extends Component {
   // favorite passed in
   handleSelect = () => {
     console.log('you selected your fav pokemon!');
-  }
+  };
 
   render() {
 
