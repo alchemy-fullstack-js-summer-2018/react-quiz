@@ -10,6 +10,7 @@ class App extends Component {
   };
 
   handleFavorite = (favorite) => {
+    console.log(favorite);
     // const { favorite } = this.state;
     this.setState({ favorite });
   };

@@ -12,7 +12,7 @@ class Pokemon extends Component {
   render() { 
     const { pokemon, onSelect } = this.props;
     return ( 
-      <li classNAme={styles.pokemon} onClick={onSelect}>
+      <li className={styles.pokemon} onClick={() => onSelect(pokemon)} style={{backgroundColor : pokemon.color_1}}>
         <p><strong>{pokemon.pokemon}</strong></p>
         <img src={pokemon.url_image}/>
         <p>Type 1: {pokemon.type_1}</p>
