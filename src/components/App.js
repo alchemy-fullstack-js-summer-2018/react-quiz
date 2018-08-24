@@ -15,6 +15,7 @@ class App extends Component {
   };
 
   render() {
+    const { pokedex } = this.state;
 
     return (
       <div>

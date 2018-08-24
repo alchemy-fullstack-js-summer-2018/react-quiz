@@ -9,9 +9,17 @@ class Pokemon extends Component {
   };
 
   render() { 
+    const { pokemon } = this.props;
+
     return (
       <li>
         <h3>Pokemon Component</h3>
+        {/* <img src={pokemon.url_image}></img> */}
+        <p>{pokemon.name}</p>
+        <p>{pokemon.type_1}</p>
+        <p>{pokemon.type_2}</p>
+        <p>{pokemon.attack}</p>
+        <p>{pokemon.defense}</p>
       </li>
     );
   }
