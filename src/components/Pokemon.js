@@ -19,6 +19,7 @@ class Pokemon extends Component {
         <p>Type 2: {pokemon.type_2}</p>
         <p>Attack: {pokemon.attack}</p>
         <p>Defense: {pokemon.defense}</p>
+        <button name="favorite" onClick={() => onSelect(pokemon)}>Add as Favorite</button>
         
       </li>
     );

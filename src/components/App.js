@@ -16,12 +16,16 @@ class App extends Component {
   render() {
     const { pokedex, favorite } = this.state;
 
+    console.log(favorite);
     return (
       <div>
         {favorite 
           ? <Fragment>
-            <img src={favorite.image}/>
+            <h1>Your Favorite Pokemon!</h1>
+            <p>{favorite.pokemon}</p>
+            <img src={favorite.url_image}/>
             <h2>favorite.name</h2>
+            <hr/>
           </Fragment>
           : <h2>Select your favorite pokemon.</h2>
         }
