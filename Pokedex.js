@@ -13,5 +13,15 @@ class Pokedex extends Component {
     onSelect: PropTypes.func.isRequired,
   };
 
+  render() {
+
+    return (
+      <p>
+
+      </p>
+    );
+  }
 }
+
+export default Pokedex:
 

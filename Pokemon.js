@@ -13,3 +13,14 @@ class Pokemon extends Component {
     onSelect: PropTypes.func.isRequired,
   };
 }
+
+render () {
+
+  return (
+    <ul>
+      
+    </ul>
+  )
+}
+
+export default Pokemon;
