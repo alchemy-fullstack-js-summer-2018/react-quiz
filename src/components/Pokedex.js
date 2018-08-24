@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Pokemon from './Pokemon';
 
 class Pokedex extends Component {
 
@@ -10,9 +11,11 @@ class Pokedex extends Component {
   
   render() { 
     return (
-      <div>
+      <ul>
         <h2>Pokedex Component</h2>
-      </div>
+
+        <Pokemon />
+      </ul>
     );
   }
 }
