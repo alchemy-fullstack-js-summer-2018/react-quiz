@@ -9,11 +9,18 @@ class App extends Component {
   };
 
   render() {
+    const { pokedex } = this.state;
 
     return (
-      <div>Hello React Quiz! {this.state.pokedex.length}</div>
+      <li>
+        <h1>Hello React Quiz! {this.state.pokedex.length}</h1>
+        
+        <p>{pokedex}</p> 
+          
+      </li>
     );
   }
 }
+
 
 export default App;
