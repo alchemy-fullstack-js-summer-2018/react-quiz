@@ -18,20 +18,15 @@ class Pokemon extends Component {
     return onRemove(pokemon.key);
   };
 
-  handleComplete = pokemon => {
-    const { onUpdate } = this.props;
-    return onUpdate(pokemon).then(this.handleEndEdit);
-  };
-
   render() {
     const { pokemon } = this.props;
 
     return (
       <li>
-          <PokemonDisplay  
-            pokemon={pokemon}
-            onDelete={this.handleDelete}
-          />
+        <PokemonDisplay  
+          pokemon={pokemon}
+          onDelete={this.handleDelete}
+        />
       </li>
     );
   }

@@ -3,14 +3,7 @@ body {
   color: black;
 }
 
-.note-form {
-  border-radius: 10px;
-  border: 2px solid orange;
-  margin: 20px;
-  padding: 20px;
-  }
-
-.note-display, button {
+.pokemon-display, button {
   margin: 5px;
 }
 

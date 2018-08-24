@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import styles from './Header.css';
 
 class Header extends Component {
 
   render() {
 
     return (
-      <div>
+      <div className={styles.header}>
       
         <section className="header-container">
           <div className="logo">

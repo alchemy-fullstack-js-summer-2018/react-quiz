@@ -12,7 +12,7 @@ class Pokemon extends Component {
     const { pokemon, onDelete } = this.props;
 
     return (
-      <p className="note-display">
+      <p className="pokemon-display">
         {pokemon.title}: {pokemon.content} 
         <button name="Delete" onClick={onDelete}>🗑</button>
       </p>
