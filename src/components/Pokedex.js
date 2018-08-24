@@ -27,6 +27,7 @@ class Pokedex extends Component {
           <Pokemon
             name={pokemon.name}
             image={pokemon.url_image}
+            onSelect={favorite}
           />
         ))}
       </ul>
