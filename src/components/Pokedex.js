@@ -10,15 +10,15 @@ static propTypes = {
 };
 
 render() {
-  const { pokedex } = this.props;
+  const { pokedex, onSelect } = this.props;
 
   return (
     <ul>
       {pokedex.map((pokemon, i) => (
         <Pokemon
-        key={i}
-        pokemon={pokemon}
-        onSelect={onSelect}
+          key={i}
+          pokemon={pokemon}
+          onSelect={onSelect}
         />
       ))}
     </ul>

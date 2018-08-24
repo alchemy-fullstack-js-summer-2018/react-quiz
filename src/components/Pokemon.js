@@ -4,13 +4,18 @@ import styles from './Pokemon.css';
 
 export default class Pokemon extends Component {
 
+  state = {
+    favorite: false
+  };
+
   static propTypes = {
-    pokemon: PropTypes.object
-    onSelect
+    pokemon: PropTypes.object,
+    onSelect: PropTypes.func.isRequired
   };
 
   render() {
-    const { pokemon } = this.props;
+    const { pokemon, onSelect } = this.props;
+    const { favorite } = this.state;
 
     return (
       <li className={styles.pokemon}>
@@ -20,7 +25,7 @@ export default class Pokemon extends Component {
         <p>Attack: {pokemon.attack}</p>
         <p>Defense: {pokemon.defense}</p>
         <img src={pokemon.url_image}/>
-        <button onClick={}
+        <button onClick={onSelect}>{favorite ? 'Remove from' : 'Add to'} favorites</button>
       </li>
     );
   }

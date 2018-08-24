@@ -10,8 +10,8 @@ class App extends Component {
   };
 
   handleSelect = () => {
-
-  }
+    console.log('Clicked!');
+  };
 
   render() {
     console.log(pokedex);
