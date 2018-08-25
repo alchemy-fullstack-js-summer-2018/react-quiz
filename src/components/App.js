@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import pokedex from '../pokedex';
+import pokedex from '../../pokedex';
+import Pokemon from './Pokemon';
 
 class App extends Component {
 
@@ -11,7 +12,7 @@ class App extends Component {
   render() {
 
     return (
-      <div>Hello React Quiz! {this.state.pokedex.length}</div>
+      <div>Hello React Quiz! {Pokemon}</div>
     );
   }
 }
