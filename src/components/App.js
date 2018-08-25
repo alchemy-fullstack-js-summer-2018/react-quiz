@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import pokedex from '../pokedex';
+import Pokedex from './Pokedex';
 
 class App extends Component {
 
@@ -8,10 +9,30 @@ class App extends Component {
     favorite: null
   };
 
-  render() {
+  handleSelect = favorite => {
+    this.setState({ favorite });
+  };
 
+  render() {
+    const { pokedex, favorite } = this.state;
+
+    console.log(favorite);
     return (
-      <div>Hello React Quiz! {this.state.pokedex.length}</div>
+      <div>
+        {favorite 
+          ? <Fragment>
+            <h1>Your Favorite Pokemon!</h1>
+            <p>{favorite.pokemon}</p>
+            <img src={favorite.url_image}/>
+            <hr/>
+          </Fragment>
+          : <h2>Select your favorite pokemon.</h2>
+        }
+        <Pokedex 
+          pokedex={pokedex}
+          onSelect={this.handleSelect}
+        />
+      </div>
     );
   }
 }
