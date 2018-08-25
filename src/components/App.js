@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import pokedex from '../pokedex';
+import Pokedex from './Pokedex';
+import styles from './App.css';
 
 class App extends Component {
 
@@ -11,7 +13,13 @@ class App extends Component {
   render() {
 
     return (
-      <div>Hello React Quiz! {this.state.pokedex.length}</div>
+      <Fragment>
+
+        <div className={styles.App}>Total Pokemon: {this.state.pokedex.length}</div>
+        <section>
+          <Pokedex/>
+        </section>
+      </Fragment>
     );
   }
 }
